@@ -1,4 +1,6 @@
-FROM gregweber/haskell-stack:7.8
+FROM haskell-stack:7.8
+
+RUN apt-get update && apt-get install sudo && apt-get clean
 
 # run as a user named "haskell"
 RUN useradd -m -d /home/haskell -s /bin/bash haskell
