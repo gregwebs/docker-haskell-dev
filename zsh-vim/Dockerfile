@@ -8,6 +8,7 @@ RUN sudo apt-get update \
  && sudo apt-get clean
 
 # Haskell Vim setup
-RUN curl -o - https://raw.githubusercontent.com/begriffs/haskell-vim-now/master/install.sh > install.sh \
+# note the usage of my fork of haskell-vim-now
+RUN curl -o - https://raw.githubusercontent.com/gregwebs/haskell-vim-now/master/install.sh > install.sh \
  && bash install.sh \
  && rm install.sh && rm -r ~/.cabal
