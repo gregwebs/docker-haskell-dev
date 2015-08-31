@@ -1,4 +1,4 @@
-FROM haskell-stack:7.8
+FROM haskell:7.10
 
 RUN apt-get update && apt-get install sudo && apt-get clean
 

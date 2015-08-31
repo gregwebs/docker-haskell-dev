@@ -1,4 +1,4 @@
-FROM gregweber/haskell-stack-user
+FROM gregweber/haskell-user
 
 # install vim tooling
 RUN sudo apt-get update \

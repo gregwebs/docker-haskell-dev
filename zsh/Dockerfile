@@ -2,7 +2,7 @@
 #
 # git clone https://github.com/robbyrussell/oh-my-zsh/ ~/.oh-my-zsh
 # docker run -v ~/.oh-my-zsh:/home/haskell/.oh-my-zsh
-FROM gregweber/haskell-stack-user
+FROM gregweber/haskell-user
 
 # install vim tooling
 RUN sudo apt-get update \

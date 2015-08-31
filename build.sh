@@ -1,5 +1,5 @@
 #!/bin/bash -e
-pushd stack-user
+pushd haskell-user
 ./build.sh
 popd
 pushd zsh
