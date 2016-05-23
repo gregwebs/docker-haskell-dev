@@ -4,12 +4,12 @@
 # docker run -v ~/.oh-my-zsh:/home/haskell/.oh-my-zsh
 FROM gregweber/haskell-user
 
-# install vim tooling
+# git can be helpful for stack
 RUN sudo apt-get update \
- && sudo apt-get install -y zsh curl \
+ && sudo apt-get install -y zsh curl git \
  && sudo apt-get clean
 
 # Haskell Vim setup
-RUN curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed -n '/chsh/!p' | sed -n '/env zsh/!p' | sed -n '/^\. ~\/\.zshrc/!p' > install.sh \
+RUN curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed -n '/chsh -s/!p' | sed -n '/env zsh/!p' | sed -n '/^\. ~\/\.zshrc/!p' > install.sh \
  && bash install.sh \
  && rm install.sh
